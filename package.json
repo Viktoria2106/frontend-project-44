@@ -9,8 +9,9 @@
   "author": "",
   "license": "ISC",
   "type": "module",
-  "bin" {
-    "brain-games": "bin/brain-games.js"
+  "bin": {
+    "brain-games": "./bin/brain-games.js"
   }
+    
 
 }
