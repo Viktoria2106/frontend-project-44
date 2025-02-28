@@ -13,4 +13,5 @@ const game1 = () => {
             count++;
         }
     }
+    return `Congratulations, ${name}`;
 }
