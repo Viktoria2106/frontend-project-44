@@ -1,3 +1,4 @@
+import getRandomNumber from '../utils.js';
 import readlineSync from 'readline-sync';
 
 const isEven = (num) => num % 2 === 0;
