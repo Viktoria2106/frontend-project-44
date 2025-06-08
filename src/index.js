@@ -19,7 +19,7 @@ const runGame = (getQuestionAndAnswer, description) => {
       return;
     }
   }
-  console.log(`Congratualtions, ${userName}!`);
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default runGame;
