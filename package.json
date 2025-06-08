@@ -4,12 +4,9 @@
   "description": "[![Actions Status](https://github.com/Viktoria2106/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Viktoria2106/frontend-project-44/actions)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "postinstall": "node scripts/set-permissions.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Victoria Konkova",
   "license": "ISC",
   "type": "module",
   "bin": {
