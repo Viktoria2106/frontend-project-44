@@ -17,12 +17,12 @@ const calculate = (num1, num2, operator) => {
 const description = 'What is the result of the expression?';
 
 const getQuestionAndAnswer = () => {
-  const num1 = getRandomNum();
-  const num2 = getRandomNum();
+  const num1 = getRandomNum(1,5);
+  const num2 = getRandomNum(1,5);
   const operators = ['+', '-', '*'];
-  const operator = operators[getRandomNum(0, operators.length - 1)];
+  const operator = operators[getRandomNum(0, 2)];
   const question = `${num1} ${operator} ${num2}`;
-  const answer = Number(calculate(num1, num2, operator));
+  const answer = toString(calculate(num1, num2, operator));
   return [question, answer];
 };
 
