@@ -4,9 +4,7 @@
   "description": "[![Actions Status](https://github.com/Viktoria2106/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Viktoria2106/frontend-project-44/actions)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx eslint .",
-    "lint:fix": "npx eslint . --fix"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Victoria Konkova",
   "license": "ISC",
@@ -20,15 +18,12 @@
     "brain-prime": "bin/brain-prime.js"
   },
   "dependencies": {
-    "eslint-plugin-fp": "^2.3.0",
-    "link": "^2.1.1",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
-    "@eslint/create-config": "^1.0.0",
-    "@eslint/eslintrc": "^3.3.0",
+    "@eslint/create-config": "^1.9.0",
     "@eslint/js": "^9.28.0",
-    "eslint": "^8.57.1",
+    "eslint": "^9.28.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.31.0",
     "globals": "^16.2.0"
