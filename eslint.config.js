@@ -1,8 +1,7 @@
-import js from "@eslint/js";
-import globals from "globals";
+import globals from 'globals';
 import { fileURLToPath } from 'url';
 import path from 'path';
-import { defineConfig } from "eslint/config";
+import { defineConfig } from 'eslint/config';
 import pluginJs from '@eslint/js';
 import importPlugin from 'eslint-plugin-import';
 import { FlatCompat } from '@eslint/eslintrc';
@@ -14,10 +13,9 @@ const compat = new FlatCompat({
   recommendedConfig: pluginJs.configs.recommended,
 });
 
-
 export default [
   pluginJs.configs.recommended,
-    ...compat.extends('airbnb-base'),
+  ...compat.extends('airbnb-base'),
   {
     languageOptions: {
       parserOptions: {
@@ -30,19 +28,19 @@ export default [
       },
     },
     plugins: {
-      import: importPlugin
+      import: importPlugin,
     },
     rules: {
       ...importPlugin.configs.recommended.rules,
       'no-underscore-dangle': [
         'error',
-        { allow: ['__filename', '__dirname'] }
+        { allow: ['__filename', '__dirname'] },
       ],
       'import/extensions': ['error', { js: 'always' }],
       'import/no-named-as-default': 'off',
       'import/no-named-as-default-member': 'off',
       'no-console': 'off',
-      'import/no-extraneous-dependencies': 'off'
-    }
-  }
+      'import/no-extraneous-dependencies': 'off',
+    },
+  },
 ];
