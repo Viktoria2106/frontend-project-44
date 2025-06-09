@@ -1,7 +1,6 @@
 import globals from 'globals';
 import { fileURLToPath } from 'url';
 import path from 'path';
-import { defineConfig } from 'eslint/config';
 import pluginJs from '@eslint/js';
 import importPlugin from 'eslint-plugin-import';
 import { FlatCompat } from '@eslint/eslintrc';
