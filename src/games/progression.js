@@ -8,7 +8,7 @@ const generateQuestion = (start, diff, length, ind) => {
     return index === ind ? '..' : result
   }, 1)
   return arrayWithProgression.join(' ')
-};
+}
 
 const lengthOfProgression = 10
 

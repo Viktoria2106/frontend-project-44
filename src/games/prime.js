@@ -12,15 +12,15 @@ const isPrime = (number) => {
     }
   }
   return true
-};
+}
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 const getQuestionAndAnswer = () => {
-  const question = getRandomNum();
+  const question = getRandomNum()
   const answer = isPrime(question) ? 'yes' : 'no'
   return [question, answer]
-};
+}
 
 const run = () => runGame(getQuestionAndAnswer, description)
 

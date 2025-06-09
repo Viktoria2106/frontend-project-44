@@ -11,7 +11,7 @@ const getQuestionAndAnswer = () => {
   const question = `${num1} ${num2}`
   const answer = Number(getGcd(num1, num2))
   return [question, answer]
-};
+}
 
 const run = () => runGame(getQuestionAndAnswer, description)
 
