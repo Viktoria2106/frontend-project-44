@@ -20,19 +20,27 @@
     "brain-prime": "bin/brain-prime.js"
   },
   "dependencies": {
-    "eslint-plugin-fp": "^2.3.0",
-    "link": "^2.1.1",
-    "readline-sync": "^1.4.10"
+   "@stylistic/eslint-plugin": "^4.1.0",
+    "debug": "^4.4.0",
+    "es-toolkit": "^1.32.0",
+    "jiti": "^2.4.2",
+    "vitest": "^3.0.7"
+      },
+      "lint-staged": {
+    "*.js": "eslint --fix"
   },
   "devDependencies": {
-    "@eslint/create-config": "^1.0.0",
-    "@eslint/eslintrc": "^3.3.0",
-    "@eslint/js": "^9.28.0",
-    "eslint": "^8.57.1",
-    "eslint-config-airbnb-base": "^15.0.0",
+   "@eslint/eslintrc": "^3.3.0",
+    "@eslint/js": "^9.21.0",
+    "@vitest/coverage-v8": "^3.1.1",
+    "eslint": "^9.21.0",
     "eslint-plugin-import": "^2.31.0",
-    "globals": "^16.2.0"
-  },
+    "globals": "^16.0.0",
+    "lint-staged": "^15.4.3",
+    "npm-check-updates": "^17.1.15",
+    "release-it": "^18.1.2",
+    "simple-git-hooks": "^2.11.1"
+      },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Viktoria2106/frontend-project-44.git"

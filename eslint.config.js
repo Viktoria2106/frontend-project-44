@@ -1,50 +1,31 @@
-import globals from 'globals';
-import pluginJs from '@eslint/js';
-import importPlugin from 'eslint-plugin-import';
-import { FlatCompat } from '@eslint/eslintrc';
-import { fileURLToPath } from 'url';
-import path from 'path';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: pluginJs.configs.recommended,
-});
+import globals from 'globals'
+import pluginJs from '@eslint/js'
+import stylistic from '@stylistic/eslint-plugin'
+// import { Linter } from 'eslint'
 
 export default [
-  // Базовые настройки ESLint
+  stylistic.configs.recommended,
   pluginJs.configs.recommended,
-
-  // Airbnb config (адаптированный для Flat Config)
-    ...compat.extends('airbnb-base'),
-
-  // Ваши кастомные настройки
+  ...tseslint.configs.recommendedTypeChecked,
+  ...tseslint.configs.stylisticTypeChecked,
+  {
+    files: [
+      '**/*.{js,ts,tsx}',
+    ],
+  },
+  {
+    ignores: ['dist/'],
+  },
   {
     languageOptions: {
+      globals: globals.node,
       parserOptions: {
-        sourceType: 'module',
-        ecmaVersion: 'latest',
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
       },
-      globals: {
-        ...globals.jest,
-        ...globals.node,
-      },
-    },
-    plugins: {
-      import: importPlugin
     },
     rules: {
-      ...importPlugin.configs.recommended.rules,
-      'no-underscore-dangle': [
-        'error',
-        { allow: ['__filename', '__dirname'] }
-      ],
-      'import/extensions': ['error', { js: 'always' }],
-      'import/no-named-as-default': 'off',
-      'import/no-named-as-default-member': 'off',
-      'no-console': 'off',
-      'import/no-extraneous-dependencies': 'off'
-    }
-  }
-];
+      '@typescript-eslint/no-unused-vars': 'off',
+    },
+  },
+] // satisfies Linter.Config[]
