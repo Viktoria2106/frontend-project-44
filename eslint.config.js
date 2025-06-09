@@ -1,9 +1,9 @@
 import globals from 'globals';
-import { fileURLToPath } from 'url';
-import path from 'path';
 import pluginJs from '@eslint/js';
 import importPlugin from 'eslint-plugin-import';
 import { FlatCompat } from '@eslint/eslintrc';
+import { fileURLToPath } from 'url';
+import path from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -14,7 +14,9 @@ const compat = new FlatCompat({
 
 export default [
   pluginJs.configs.recommended,
-  ...compat.extends('airbnb-base'),
+
+    ...compat.extends('airbnb-base'),
+
   {
     languageOptions: {
       parserOptions: {
@@ -27,19 +29,19 @@ export default [
       },
     },
     plugins: {
-      import: importPlugin,
+      import: importPlugin
     },
     rules: {
       ...importPlugin.configs.recommended.rules,
       'no-underscore-dangle': [
         'error',
-        { allow: ['__filename', '__dirname'] },
+        { allow: ['__filename', '__dirname'] }
       ],
       'import/extensions': ['error', { js: 'always' }],
       'import/no-named-as-default': 'off',
       'import/no-named-as-default-member': 'off',
       'no-console': 'off',
-      'import/no-extraneous-dependencies': 'off',
-    },
-  },
+      'import/no-extraneous-dependencies': 'off'
+    }
+  }
 ];
