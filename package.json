@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npx eslint .",
-    "lint:fix": "npx eslint . --fix" 
+    "lint:fix": "npx eslint . --fix"
   },
   "author": "Victoria Konkova",
   "license": "ISC",
@@ -20,9 +20,13 @@
     "brain-prime": "bin/brain-prime.js"
   },
   "dependencies": {
+    "eslint-plugin-fp": "^2.3.0",
+    "link": "^2.1.1",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
+    "@eslint/create-config": "^1.0.0",
+    "@eslint/eslintrc": "^3.3.0",
     "@eslint/js": "^9.28.0",
     "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "^15.0.0",

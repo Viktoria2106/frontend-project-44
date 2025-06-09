@@ -11,3 +11,40 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
   recommendedConfig: pluginJs.configs.recommended,
 });
+
+export default [
+  // Базовые настройки ESLint
+  pluginJs.configs.recommended,
+
+  // Airbnb config (адаптированный для Flat Config)
+    ...compat.extends('airbnb-base'),
+
+  // Ваши кастомные настройки
+  {
+    languageOptions: {
+      parserOptions: {
+        sourceType: 'module',
+        ecmaVersion: 'latest',
+      },
+      globals: {
+        ...globals.jest,
+        ...globals.node,
+      },
+    },
+    plugins: {
+      import: importPlugin
+    },
+    rules: {
+      ...importPlugin.configs.recommended.rules,
+      'no-underscore-dangle': [
+        'error',
+        { allow: ['__filename', '__dirname'] }
+      ],
+      'import/extensions': ['error', { js: 'always' }],
+      'import/no-named-as-default': 'off',
+      'import/no-named-as-default-member': 'off',
+      'no-console': 'off',
+      'import/no-extraneous-dependencies': 'off'
+    }
+  }
+];
